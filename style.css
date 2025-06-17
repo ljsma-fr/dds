@@ -299,6 +299,19 @@ header nav a.active {
   height: auto;
 }
 
+.partner-text a {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--main-color);
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.partner-text a:hover {
+  color: #cc2d7d;
+  border-bottom-color: #cc2d7d;
+}
+
 .pink-background {
   background-color: #e63990;
 }
