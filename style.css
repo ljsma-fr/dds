@@ -1,3 +1,4 @@
+/* Polices */
 @font-face {
   font-family: 'Phudu';
   src: url('assets/fonts/Phudu-Bold.ttf') format('truetype');
@@ -12,6 +13,7 @@
   font-style: normal;
 }
 
+/* Variables */
 :root {
   --main-color: #e63990;
   --accent-color: #f9f9f9;
@@ -19,52 +21,43 @@
   --background-color: #fff;
 }
 
+/* Structure de base */
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #0074a2;
-}
-
-main h1,
-main h2,
-main h3 {
-  color: #e63990;
-}
-
-h1, h2, h3 {
-  font-family: 'Phudu', sans-serif;
-  font-weight: 800;
-}
-
-main {
-  flex: 1;
-  width: 100%;
-  max-width: 90%;
-  margin: 1em auto;
-  margin-bottom: 2em;
-}
-
-body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: var(--text-color);
   background: var(--background-color);
   display: flex;
   flex-direction: column;
-  margin: 0px;
 }
 
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 90%;
+  margin: 1em auto 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0074a2;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Phudu', sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+  color: #e63990;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Header */
 header {
   background: var(--main-color);
   position: sticky;
@@ -83,6 +76,8 @@ header {
 }
 
 .logo-container {
+  text-decoration: none;
+  color: inherit;
   display: flex;
   align-items: center;
 }
@@ -131,144 +126,7 @@ header nav a.active {
   opacity: 0.9;
 }
 
-.gallery {
-  margin-top: 3em;
-  padding: 2em 1em;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-.gallery h2 {
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1em;
-}
-
-.gallery-container img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  height: 200px;
-}
-
-.about {
-  margin-top: 3em;
-  padding: 2em;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-.about h2 {
-  margin-bottom: 0.5em;
-}
-
-
-.hero {
-  background: var(--accent-color);
-  padding: 3em 1em;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.hero h1 {
-  color: #fff;
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-}
-
-.hero p {
-  font-size: 1.2em;
-}
-
-.hero-background {
-  position: relative;
-  background-image: url('assets/bonbons-des-vosges-de.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  margin: 2em 0;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  padding: 4em 1em;
-  overflow: hidden;
-}
-
-.hero-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-}
-
-.hero-background h1,
-.hero-background p,
-.hero-background a.button {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-background h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-}
-
-.hero-background p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-.features {
-  margin-top: 3em;
-}
-
-.features-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 1em;
-}
-
-.feature {
-  background: var(--accent-color);
-  padding: 1em;
-  margin: 0.5em;
-  border-radius: 8px;
-  flex: 1 1 200px;
-}
-
-.testimonial {
-  background: var(--accent-color);
-  margin-top: 3em;
-  padding: 2em;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.cta {
-  text-align: center;
-  margin-top: 3em;
-}
-
-h1,
-h2,
-h3 {
-  margin-bottom: 0.5em;
-}
-
-p {
-  margin-bottom: 1em;
-}
-
+/* Boutons */
 .button {
   display: inline-block;
   background: var(--main-color);
@@ -284,6 +142,161 @@ p {
   background: #cc2d7d;
 }
 
+/* Sections générales */
+.hero,
+.about,
+.whyus,
+.testimonial {
+  background: var(--accent-color);
+  padding: 2em;
+  border-radius: 8px;
+  margin-top: 3em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1,
+.hero p {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-background {
+  position: relative;
+  background-image: url('assets/bonbons-des-vosges-de.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin: 2em 0;
+  text-align: center;
+  color: #fff;
+  padding: 4em 1em;
+  overflow: hidden;
+}
+
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-background > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gallery */
+.gallery {
+  background: #f9f9f9;
+  padding: 2em 1em;
+  border-radius: 8px;
+  margin-top: 3em;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-container a:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Pourquoi nous choisir */
+.whyus .intro-text {
+  max-width: 700px;
+  margin: 0 auto 2em;
+  text-align: center;
+}
+
+.whyus-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.whyus-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5em;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.whyus-card:hover {
+  transform: translateY(-5px);
+}
+
+.whyus-card i {
+  font-size: 2em;
+  color: var(--main-color);
+  margin-bottom: 0.5em;
+}
+
+/* Partenaires */
+.partner-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-bottom: 3em;
+  align-items: center;
+}
+
+.partner-text {
+  flex: 1 1 60%;
+}
+
+.partner-logo {
+  flex: 1 1 250px;
+  text-align: center;
+  background: #fff;
+  padding: 1em;
+  border-radius: 12px;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pink-background {
+  background-color: #e63990;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3em;
+}
+
+/* Footer */
 footer {
   background: var(--main-color);
   color: #fff;
@@ -309,7 +322,6 @@ footer {
 
 .footer-container i {
   margin-right: 0.4em;
-  color: #fff;
   font-size: 1em;
 }
 
